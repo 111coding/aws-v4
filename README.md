@@ -27,3 +27,15 @@ RDS_HOSTNAME 의 경우 스프링 yml 파일에서 접근할 때 3가지 방법�
 자바로 접근할 떄는 아래와 같이 찾을 수 있다.
 System.getProperty("RDS_HOSTNAME");
 ```
+
+```sql
+CREATE DATABASE metadb;
+USE metadb;
+
+CREATE TABLE Book (
+  id INTEGER AUTO_INCREAMENT PRIMARY KEY,
+  title VARCHAR(255),
+  content VARCHAR(255),
+  author VARCHAR(255)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+```
